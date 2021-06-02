@@ -22,7 +22,7 @@ environment:
 
 dependencies:
   tflite: '1.1.2'
-  image_picker: '5.4.3'
+  image_picker: '0.8.0'
   flutter:
     sdk: flutter
 
