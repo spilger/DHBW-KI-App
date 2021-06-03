@@ -1,0 +1,14 @@
+Ankylosaurus
+Brachiosaurus
+Brontosaurus
+Dilophosaurus
+Dimetrodon
+Diplodocus
+Iguanodon
+Protoceratops
+Pteranodon
+Spinosaurus
+Stegosaurus
+Tyrannosaurus
+Triceratops
+Velociraptor

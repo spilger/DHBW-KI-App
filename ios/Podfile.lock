@@ -1,36 +1,46 @@
 PODS:
+  - audioplayers (0.0.1):
+    - Flutter
+  - camera (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
-  - image_picker (0.0.1):
+  - path_provider (0.0.1):
     - Flutter
-  - TensorFlowLiteC (2.4.0):
-    - TensorFlowLiteC/Core (= 2.4.0)
-  - TensorFlowLiteC/Core (2.4.0)
-  - tflite (1.1.2):
+  - TensorFlowLite (1.13.1)
+  - tflite (1.0.4):
     - Flutter
-    - TensorFlowLiteC
+    - TensorFlowLite
 
 DEPENDENCIES:
+  - audioplayers (from `.symlinks/plugins/audioplayers/ios`)
+  - camera (from `.symlinks/plugins/camera/ios`)
   - Flutter (from `Flutter`)
-  - image_picker (from `.symlinks/plugins/image_picker/ios`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
   - tflite (from `.symlinks/plugins/tflite/ios`)
 
 SPEC REPOS:
   trunk:
-    - TensorFlowLiteC
+    - TensorFlowLite
 
 EXTERNAL SOURCES:
+  audioplayers:
+    :path: ".symlinks/plugins/audioplayers/ios"
+  camera:
+    :path: ".symlinks/plugins/camera/ios"
   Flutter:
     :path: Flutter
-  image_picker:
-    :path: ".symlinks/plugins/image_picker/ios"
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
   tflite:
     :path: ".symlinks/plugins/tflite/ios"
 
 SPEC CHECKSUMS:
+  audioplayers: 84f968cea3f2deab00ec4f8ff53358b3c0b3992c
+  camera: 38cc83ae9a5667bb5a71c7d9edaf60a91920fd4e
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
-  image_picker: 50e7c7ff960e5f58faa4d1f4af84a771c671bc4a
-  TensorFlowLiteC: 09f8ac75a76caeadb19bcfa694e97454cc1ecf87
-  tflite: 7acd11db0915e2d90ab90474413068568eb605f0
+  path_provider: fb74bd0465e96b594bb3b5088ee4a4e7bb1f2a9d
+  TensorFlowLite: 8b9dc4eb32eac0f8cb660c66bca7604da56dcc5a
+  tflite: a6911f4ac99be9c73c1dcffb1a5d54b3c56087a8
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 
