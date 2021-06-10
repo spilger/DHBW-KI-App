@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F9EC81F26720BBE00BEB27A /* Dog_ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC81E26720BBE00BEB27A /* Dog_ScannerApp.swift */; };
+		9F9EC82126720BBE00BEB27A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC82026720BBE00BEB27A /* ContentView.swift */; };
+		9F9EC82326720BC000BEB27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EC82226720BC000BEB27A /* Assets.xcassets */; };
+		9F9EC82626720BC000BEB27A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EC82526720BC000BEB27A /* Preview Assets.xcassets */; };
+		9F9EC83126720BC000BEB27A /* Dog_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC83026720BC000BEB27A /* Dog_ScannerTests.swift */; };
+		9F9EC83C26720BC000BEB27A /* Dog_ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC83B26720BC000BEB27A /* Dog_ScannerUITests.swift */; };
+		9F9EC85226720BFF00BEB27A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84B26720BFF00BEB27A /* CameraView.swift */; };
+		9F9EC85326720BFF00BEB27A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84B26720BFF00BEB27A /* CameraView.swift */; };
+		9F9EC85426720BFF00BEB27A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84B26720BFF00BEB27A /* CameraView.swift */; };
+		9F9EC85526720BFF00BEB27A /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84C26720BFF00BEB27A /* ImageResizer.swift */; };
+		9F9EC85626720BFF00BEB27A /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84C26720BFF00BEB27A /* ImageResizer.swift */; };
+		9F9EC85726720BFF00BEB27A /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84C26720BFF00BEB27A /* ImageResizer.swift */; };
+		9F9EC85826720BFF00BEB27A /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84D26720BFF00BEB27A /* CameraService.swift */; };
+		9F9EC85926720BFF00BEB27A /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84D26720BFF00BEB27A /* CameraService.swift */; };
+		9F9EC85A26720BFF00BEB27A /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84D26720BFF00BEB27A /* CameraService.swift */; };
+		9F9EC85B26720BFF00BEB27A /* PhotoCaptureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84E26720BFF00BEB27A /* PhotoCaptureProcessor.swift */; };
+		9F9EC85C26720BFF00BEB27A /* PhotoCaptureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84E26720BFF00BEB27A /* PhotoCaptureProcessor.swift */; };
+		9F9EC85D26720BFF00BEB27A /* PhotoCaptureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84E26720BFF00BEB27A /* PhotoCaptureProcessor.swift */; };
+		9F9EC85E26720BFF00BEB27A /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84F26720BFF00BEB27A /* CameraPreview.swift */; };
+		9F9EC85F26720BFF00BEB27A /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84F26720BFF00BEB27A /* CameraPreview.swift */; };
+		9F9EC86026720BFF00BEB27A /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC84F26720BFF00BEB27A /* CameraPreview.swift */; };
+		9F9EC86126720BFF00BEB27A /* CameraService+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC85026720BFF00BEB27A /* CameraService+Extensions.swift */; };
+		9F9EC86226720C0000BEB27A /* CameraService+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC85026720BFF00BEB27A /* CameraService+Extensions.swift */; };
+		9F9EC86326720C0000BEB27A /* CameraService+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC85026720BFF00BEB27A /* CameraService+Extensions.swift */; };
+		9F9EC86426720C0000BEB27A /* CameraService+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC85126720BFF00BEB27A /* CameraService+Enums.swift */; };
+		9F9EC86526720C0000BEB27A /* CameraService+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC85126720BFF00BEB27A /* CameraService+Enums.swift */; };
+		9F9EC86626720C0000BEB27A /* CameraService+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC85126720BFF00BEB27A /* CameraService+Enums.swift */; };
+		9F9EC86826720C1600BEB27A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC86726720C1600BEB27A /* UIView.swift */; };
+		9F9EC86926720C1600BEB27A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC86726720C1600BEB27A /* UIView.swift */; };
+		9F9EC86A26720C1600BEB27A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC86726720C1600BEB27A /* UIView.swift */; };
+		9F9EC86C26720F9800BEB27A /* PredictionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC86B26720F9800BEB27A /* PredictionPage.swift */; };
+		9F9EC86D26720F9800BEB27A /* PredictionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC86B26720F9800BEB27A /* PredictionPage.swift */; };
+		9F9EC86E26720F9800BEB27A /* PredictionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC86B26720F9800BEB27A /* PredictionPage.swift */; };
+		9F9EC8702672103D00BEB27A /* dog.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EC86F2672103D00BEB27A /* dog.JPG */; };
+		9F9EC8712672103D00BEB27A /* dog.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EC86F2672103D00BEB27A /* dog.JPG */; };
+		9F9EC8722672103D00BEB27A /* dog.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EC86F2672103D00BEB27A /* dog.JPG */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F9EC82D26720BC000BEB27A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F9EC81326720BBE00BEB27A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F9EC81A26720BBE00BEB27A;
+			remoteInfo = "Dog Scanner";
+		};
+		9F9EC83826720BC000BEB27A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F9EC81326720BBE00BEB27A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F9EC81A26720BBE00BEB27A;
+			remoteInfo = "Dog Scanner";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F9EC81B26720BBE00BEB27A /* Dog Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F9EC81E26720BBE00BEB27A /* Dog_ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_ScannerApp.swift; sourceTree = "<group>"; };
+		9F9EC82026720BBE00BEB27A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F9EC82226720BC000BEB27A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F9EC82526720BC000BEB27A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9F9EC82726720BC000BEB27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9EC82C26720BC000BEB27A /* Dog ScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dog ScannerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F9EC83026720BC000BEB27A /* Dog_ScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_ScannerTests.swift; sourceTree = "<group>"; };
+		9F9EC83226720BC000BEB27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9EC83726720BC000BEB27A /* Dog ScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dog ScannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F9EC83B26720BC000BEB27A /* Dog_ScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_ScannerUITests.swift; sourceTree = "<group>"; };
+		9F9EC83D26720BC000BEB27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9EC84B26720BFF00BEB27A /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		9F9EC84C26720BFF00BEB27A /* ImageResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizer.swift; sourceTree = "<group>"; };
+		9F9EC84D26720BFF00BEB27A /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		9F9EC84E26720BFF00BEB27A /* PhotoCaptureProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureProcessor.swift; sourceTree = "<group>"; };
+		9F9EC84F26720BFF00BEB27A /* CameraPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		9F9EC85026720BFF00BEB27A /* CameraService+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraService+Extensions.swift"; sourceTree = "<group>"; };
+		9F9EC85126720BFF00BEB27A /* CameraService+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraService+Enums.swift"; sourceTree = "<group>"; };
+		9F9EC86726720C1600BEB27A /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		9F9EC86B26720F9800BEB27A /* PredictionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionPage.swift; sourceTree = "<group>"; };
+		9F9EC86F2672103D00BEB27A /* dog.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.JPG; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F9EC81826720BBE00BEB27A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F9EC82926720BC000BEB27A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F9EC83426720BC000BEB27A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F9EC81226720BBE00BEB27A = {
+			isa = PBXGroup;
+			children = (
+				9F9EC81D26720BBE00BEB27A /* Dog Scanner */,
+				9F9EC82F26720BC000BEB27A /* Dog ScannerTests */,
+				9F9EC83A26720BC000BEB27A /* Dog ScannerUITests */,
+				9F9EC81C26720BBE00BEB27A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F9EC81C26720BBE00BEB27A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F9EC81B26720BBE00BEB27A /* Dog Scanner.app */,
+				9F9EC82C26720BC000BEB27A /* Dog ScannerTests.xctest */,
+				9F9EC83726720BC000BEB27A /* Dog ScannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F9EC81D26720BBE00BEB27A /* Dog Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				9F9EC84A26720BD700BEB27A /* CameraView */,
+				9F9EC84926720BCB00BEB27A /* Extensions */,
+				9F9EC81E26720BBE00BEB27A /* Dog_ScannerApp.swift */,
+				9F9EC82026720BBE00BEB27A /* ContentView.swift */,
+				9F9EC82226720BC000BEB27A /* Assets.xcassets */,
+				9F9EC82726720BC000BEB27A /* Info.plist */,
+				9F9EC82426720BC000BEB27A /* Preview Content */,
+				9F9EC86B26720F9800BEB27A /* PredictionPage.swift */,
+			);
+			path = "Dog Scanner";
+			sourceTree = "<group>";
+		};
+		9F9EC82426720BC000BEB27A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9F9EC82526720BC000BEB27A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F9EC82F26720BC000BEB27A /* Dog ScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F9EC83026720BC000BEB27A /* Dog_ScannerTests.swift */,
+				9F9EC83226720BC000BEB27A /* Info.plist */,
+			);
+			path = "Dog ScannerTests";
+			sourceTree = "<group>";
+		};
+		9F9EC83A26720BC000BEB27A /* Dog ScannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F9EC83B26720BC000BEB27A /* Dog_ScannerUITests.swift */,
+				9F9EC83D26720BC000BEB27A /* Info.plist */,
+			);
+			path = "Dog ScannerUITests";
+			sourceTree = "<group>";
+		};
+		9F9EC84926720BCB00BEB27A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F9EC86726720C1600BEB27A /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9F9EC84A26720BD700BEB27A /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				9F9EC84F26720BFF00BEB27A /* CameraPreview.swift */,
+				9F9EC84D26720BFF00BEB27A /* CameraService.swift */,
+				9F9EC85126720BFF00BEB27A /* CameraService+Enums.swift */,
+				9F9EC85026720BFF00BEB27A /* CameraService+Extensions.swift */,
+				9F9EC84B26720BFF00BEB27A /* CameraView.swift */,
+				9F9EC84C26720BFF00BEB27A /* ImageResizer.swift */,
+				9F9EC86F2672103D00BEB27A /* dog.JPG */,
+				9F9EC84E26720BFF00BEB27A /* PhotoCaptureProcessor.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F9EC81A26720BBE00BEB27A /* Dog Scanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F9EC84026720BC000BEB27A /* Build configuration list for PBXNativeTarget "Dog Scanner" */;
+			buildPhases = (
+				9F9EC81726720BBE00BEB27A /* Sources */,
+				9F9EC81826720BBE00BEB27A /* Frameworks */,
+				9F9EC81926720BBE00BEB27A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dog Scanner";
+			productName = "Dog Scanner";
+			productReference = 9F9EC81B26720BBE00BEB27A /* Dog Scanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F9EC82B26720BC000BEB27A /* Dog ScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F9EC84326720BC000BEB27A /* Build configuration list for PBXNativeTarget "Dog ScannerTests" */;
+			buildPhases = (
+				9F9EC82826720BC000BEB27A /* Sources */,
+				9F9EC82926720BC000BEB27A /* Frameworks */,
+				9F9EC82A26720BC000BEB27A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F9EC82E26720BC000BEB27A /* PBXTargetDependency */,
+			);
+			name = "Dog ScannerTests";
+			productName = "Dog ScannerTests";
+			productReference = 9F9EC82C26720BC000BEB27A /* Dog ScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F9EC83626720BC000BEB27A /* Dog ScannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F9EC84626720BC000BEB27A /* Build configuration list for PBXNativeTarget "Dog ScannerUITests" */;
+			buildPhases = (
+				9F9EC83326720BC000BEB27A /* Sources */,
+				9F9EC83426720BC000BEB27A /* Frameworks */,
+				9F9EC83526720BC000BEB27A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F9EC83926720BC000BEB27A /* PBXTargetDependency */,
+			);
+			name = "Dog ScannerUITests";
+			productName = "Dog ScannerUITests";
+			productReference = 9F9EC83726720BC000BEB27A /* Dog ScannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F9EC81326720BBE00BEB27A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					9F9EC81A26720BBE00BEB27A = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					9F9EC82B26720BC000BEB27A = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 9F9EC81A26720BBE00BEB27A;
+					};
+					9F9EC83626720BC000BEB27A = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 9F9EC81A26720BBE00BEB27A;
+					};
+				};
+			};
+			buildConfigurationList = 9F9EC81626720BBE00BEB27A /* Build configuration list for PBXProject "Dog Scanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F9EC81226720BBE00BEB27A;
+			productRefGroup = 9F9EC81C26720BBE00BEB27A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F9EC81A26720BBE00BEB27A /* Dog Scanner */,
+				9F9EC82B26720BC000BEB27A /* Dog ScannerTests */,
+				9F9EC83626720BC000BEB27A /* Dog ScannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F9EC81926720BBE00BEB27A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9EC8702672103D00BEB27A /* dog.JPG in Resources */,
+				9F9EC82626720BC000BEB27A /* Preview Assets.xcassets in Resources */,
+				9F9EC82326720BC000BEB27A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F9EC82A26720BC000BEB27A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9EC8712672103D00BEB27A /* dog.JPG in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F9EC83526720BC000BEB27A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9EC8722672103D00BEB27A /* dog.JPG in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F9EC81726720BBE00BEB27A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9EC86826720C1600BEB27A /* UIView.swift in Sources */,
+				9F9EC85826720BFF00BEB27A /* CameraService.swift in Sources */,
+				9F9EC85526720BFF00BEB27A /* ImageResizer.swift in Sources */,
+				9F9EC85B26720BFF00BEB27A /* PhotoCaptureProcessor.swift in Sources */,
+				9F9EC85E26720BFF00BEB27A /* CameraPreview.swift in Sources */,
+				9F9EC82126720BBE00BEB27A /* ContentView.swift in Sources */,
+				9F9EC81F26720BBE00BEB27A /* Dog_ScannerApp.swift in Sources */,
+				9F9EC86126720BFF00BEB27A /* CameraService+Extensions.swift in Sources */,
+				9F9EC85226720BFF00BEB27A /* CameraView.swift in Sources */,
+				9F9EC86426720C0000BEB27A /* CameraService+Enums.swift in Sources */,
+				9F9EC86C26720F9800BEB27A /* PredictionPage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F9EC82826720BC000BEB27A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9EC85926720BFF00BEB27A /* CameraService.swift in Sources */,
+				9F9EC86D26720F9800BEB27A /* PredictionPage.swift in Sources */,
+				9F9EC86526720C0000BEB27A /* CameraService+Enums.swift in Sources */,
+				9F9EC86226720C0000BEB27A /* CameraService+Extensions.swift in Sources */,
+				9F9EC85C26720BFF00BEB27A /* PhotoCaptureProcessor.swift in Sources */,
+				9F9EC85326720BFF00BEB27A /* CameraView.swift in Sources */,
+				9F9EC85F26720BFF00BEB27A /* CameraPreview.swift in Sources */,
+				9F9EC85626720BFF00BEB27A /* ImageResizer.swift in Sources */,
+				9F9EC86926720C1600BEB27A /* UIView.swift in Sources */,
+				9F9EC83126720BC000BEB27A /* Dog_ScannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F9EC83326720BC000BEB27A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9EC85A26720BFF00BEB27A /* CameraService.swift in Sources */,
+				9F9EC86E26720F9800BEB27A /* PredictionPage.swift in Sources */,
+				9F9EC86626720C0000BEB27A /* CameraService+Enums.swift in Sources */,
+				9F9EC86326720C0000BEB27A /* CameraService+Extensions.swift in Sources */,
+				9F9EC85D26720BFF00BEB27A /* PhotoCaptureProcessor.swift in Sources */,
+				9F9EC85426720BFF00BEB27A /* CameraView.swift in Sources */,
+				9F9EC86026720BFF00BEB27A /* CameraPreview.swift in Sources */,
+				9F9EC85726720BFF00BEB27A /* ImageResizer.swift in Sources */,
+				9F9EC86A26720C1600BEB27A /* UIView.swift in Sources */,
+				9F9EC83C26720BC000BEB27A /* Dog_ScannerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F9EC82E26720BC000BEB27A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F9EC81A26720BBE00BEB27A /* Dog Scanner */;
+			targetProxy = 9F9EC82D26720BC000BEB27A /* PBXContainerItemProxy */;
+		};
+		9F9EC83926720BC000BEB27A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F9EC81A26720BBE00BEB27A /* Dog Scanner */;
+			targetProxy = 9F9EC83826720BC000BEB27A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9F9EC83E26720BC000BEB27A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F9EC83F26720BC000BEB27A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F9EC84126720BC000BEB27A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Dog Scanner/Preview Content\"";
+				DEVELOPMENT_TEAM = 95E77V6B7D;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Dog Scanner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "spiko.Dog-Scanner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F9EC84226720BC000BEB27A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Dog Scanner/Preview Content\"";
+				DEVELOPMENT_TEAM = 95E77V6B7D;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Dog Scanner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "spiko.Dog-Scanner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F9EC84426720BC000BEB27A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95E77V6B7D;
+				INFOPLIST_FILE = "Dog ScannerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "spiko.Dog-ScannerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dog Scanner.app/Dog Scanner";
+			};
+			name = Debug;
+		};
+		9F9EC84526720BC000BEB27A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95E77V6B7D;
+				INFOPLIST_FILE = "Dog ScannerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "spiko.Dog-ScannerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dog Scanner.app/Dog Scanner";
+			};
+			name = Release;
+		};
+		9F9EC84726720BC000BEB27A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95E77V6B7D;
+				INFOPLIST_FILE = "Dog ScannerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "spiko.Dog-ScannerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dog Scanner";
+			};
+			name = Debug;
+		};
+		9F9EC84826720BC000BEB27A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95E77V6B7D;
+				INFOPLIST_FILE = "Dog ScannerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "spiko.Dog-ScannerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dog Scanner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F9EC81626720BBE00BEB27A /* Build configuration list for PBXProject "Dog Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F9EC83E26720BC000BEB27A /* Debug */,
+				9F9EC83F26720BC000BEB27A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F9EC84026720BC000BEB27A /* Build configuration list for PBXNativeTarget "Dog Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F9EC84126720BC000BEB27A /* Debug */,
+				9F9EC84226720BC000BEB27A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F9EC84326720BC000BEB27A /* Build configuration list for PBXNativeTarget "Dog ScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F9EC84426720BC000BEB27A /* Debug */,
+				9F9EC84526720BC000BEB27A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F9EC84626720BC000BEB27A /* Build configuration list for PBXNativeTarget "Dog ScannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F9EC84726720BC000BEB27A /* Debug */,
+				9F9EC84826720BC000BEB27A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F9EC81326720BBE00BEB27A /* Project object */;
+}
