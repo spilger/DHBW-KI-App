@@ -9,26 +9,19 @@ import SwiftUI
 
 struct PredictionPage: View {
     init(photo: Photo) {
-        self.photo = photo
-        print(photo.compressedData)
+        self.photo = photo.image!
+        print(photo.image)
     }
-    var photo: Photo
+    var photo: UIImage
     
     var capturedPhotoThumbnail: some View {
         Group {
-            if photo != nil {
-                Image(uiImage: photo.image!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
-                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    .animation(.spring())
-                
-            } else {
-                RoundedRectangle(cornerRadius: 10)
-                    .frame(width: 60, height: 60, alignment: .center)
-                    
-            }
+            Image(uiImage: photo)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .animation(.spring())
         }
     }
     
