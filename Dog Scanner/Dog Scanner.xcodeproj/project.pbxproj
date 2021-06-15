@@ -10,6 +10,8 @@
 		1CAC7236E646EE42433DD9F2 /* Pods_Dog_Scanner_Dog_ScannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A7C053E16FB50AEFEAB716 /* Pods_Dog_Scanner_Dog_ScannerUITests.framework */; };
 		9F164F3A267247C30048BE89 /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 9F164F38267247C30048BE89 /* model.tflite */; };
 		9F164F3B267247C30048BE89 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F164F39267247C30048BE89 /* labels.txt */; };
+		9F3E7A1A2679138600633703 /* PredictionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7A192679138600633703 /* PredictionController.swift */; };
+		9F3E7A1C2679187C00633703 /* CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7A1B2679187C00633703 /* CVPixelBuffer.swift */; };
 		9F9EC81F26720BBE00BEB27A /* Dog_ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC81E26720BBE00BEB27A /* Dog_ScannerApp.swift */; };
 		9F9EC82126720BBE00BEB27A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC82026720BBE00BEB27A /* ContentView.swift */; };
 		9F9EC82326720BC000BEB27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EC82226720BC000BEB27A /* Assets.xcassets */; };
@@ -76,6 +78,8 @@
 		9B2CB34FAA7B114776560FE8 /* Pods_Dog_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dog_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F164F38267247C30048BE89 /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model.tflite; path = "../../TfLite Classifier/ImageClassification/Model/model.tflite"; sourceTree = "<group>"; };
 		9F164F39267247C30048BE89 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = "../../TfLite Classifier/ImageClassification/Model/labels.txt"; sourceTree = "<group>"; };
+		9F3E7A192679138600633703 /* PredictionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionController.swift; sourceTree = "<group>"; };
+		9F3E7A1B2679187C00633703 /* CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBuffer.swift; sourceTree = "<group>"; };
 		9F9EC81B26720BBE00BEB27A /* Dog Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9EC81E26720BBE00BEB27A /* Dog_ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_ScannerApp.swift; sourceTree = "<group>"; };
 		9F9EC82026720BBE00BEB27A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -163,6 +167,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9F3E7A182679136C00633703 /* PredictionView */ = {
+			isa = PBXGroup;
+			children = (
+				9F9EC86B26720F9800BEB27A /* PredictionPage.swift */,
+				9F3E7A192679138600633703 /* PredictionController.swift */,
+			);
+			path = PredictionView;
+			sourceTree = "<group>";
+		};
 		9F9EC81226720BBE00BEB27A = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +202,7 @@
 		9F9EC81D26720BBE00BEB27A /* Dog Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				9F3E7A182679136C00633703 /* PredictionView */,
 				9F9EC84A26720BD700BEB27A /* CameraView */,
 				9F9EC84926720BCB00BEB27A /* Extensions */,
 				9F9EC81E26720BBE00BEB27A /* Dog_ScannerApp.swift */,
@@ -196,7 +210,6 @@
 				9F9EC82226720BC000BEB27A /* Assets.xcassets */,
 				9F9EC82726720BC000BEB27A /* Info.plist */,
 				9F9EC82426720BC000BEB27A /* Preview Content */,
-				9F9EC86B26720F9800BEB27A /* PredictionPage.swift */,
 			);
 			path = "Dog Scanner";
 			sourceTree = "<group>";
@@ -231,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9EC86726720C1600BEB27A /* UIView.swift */,
+				9F3E7A1B2679187C00633703 /* CVPixelBuffer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -462,6 +476,8 @@
 				9F9EC85B26720BFF00BEB27A /* PhotoCaptureProcessor.swift in Sources */,
 				9F9EC85E26720BFF00BEB27A /* CameraPreview.swift in Sources */,
 				9F9EC82126720BBE00BEB27A /* ContentView.swift in Sources */,
+				9F3E7A1A2679138600633703 /* PredictionController.swift in Sources */,
+				9F3E7A1C2679187C00633703 /* CVPixelBuffer.swift in Sources */,
 				9F9EC81F26720BBE00BEB27A /* Dog_ScannerApp.swift in Sources */,
 				9F9EC86126720BFF00BEB27A /* CameraService+Extensions.swift in Sources */,
 				9F9EC85226720BFF00BEB27A /* CameraView.swift in Sources */,
