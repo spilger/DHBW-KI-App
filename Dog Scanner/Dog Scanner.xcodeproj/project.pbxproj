@@ -12,6 +12,7 @@
 		9F164F3B267247C30048BE89 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F164F39267247C30048BE89 /* labels.txt */; };
 		9F3E7A1A2679138600633703 /* PredictionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7A192679138600633703 /* PredictionController.swift */; };
 		9F3E7A1C2679187C00633703 /* CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7A1B2679187C00633703 /* CVPixelBuffer.swift */; };
+		9F3E7A1E2679CB4700633703 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7A1D2679CB4700633703 /* LineView.swift */; };
 		9F9EC81F26720BBE00BEB27A /* Dog_ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC81E26720BBE00BEB27A /* Dog_ScannerApp.swift */; };
 		9F9EC82126720BBE00BEB27A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC82026720BBE00BEB27A /* ContentView.swift */; };
 		9F9EC82326720BC000BEB27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EC82226720BC000BEB27A /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		9F164F39267247C30048BE89 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = "../../TfLite Classifier/ImageClassification/Model/labels.txt"; sourceTree = "<group>"; };
 		9F3E7A192679138600633703 /* PredictionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionController.swift; sourceTree = "<group>"; };
 		9F3E7A1B2679187C00633703 /* CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBuffer.swift; sourceTree = "<group>"; };
+		9F3E7A1D2679CB4700633703 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		9F9EC81B26720BBE00BEB27A /* Dog Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9EC81E26720BBE00BEB27A /* Dog_ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_ScannerApp.swift; sourceTree = "<group>"; };
 		9F9EC82026720BBE00BEB27A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				9F9EC86B26720F9800BEB27A /* PredictionPage.swift */,
 				9F3E7A192679138600633703 /* PredictionController.swift */,
+				9F3E7A1D2679CB4700633703 /* LineView.swift */,
 			);
 			path = PredictionView;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				9F9EC86126720BFF00BEB27A /* CameraService+Extensions.swift in Sources */,
 				9F9EC85226720BFF00BEB27A /* CameraView.swift in Sources */,
 				9F9EC86426720C0000BEB27A /* CameraService+Enums.swift in Sources */,
+				9F3E7A1E2679CB4700633703 /* LineView.swift in Sources */,
 				9F9EC86C26720F9800BEB27A /* PredictionPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +577,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -634,6 +639,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

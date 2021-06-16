@@ -10,7 +10,6 @@ import SwiftUI
 struct PredictionPage: View {
     init(photo: Photo) {
         self.photo = photo.image!
-        print(photo.image)
         print(predictionController.predict(image: photo.image!))
     }
     @ObservedObject var predictionController = PredictionController()
@@ -28,15 +27,12 @@ struct PredictionPage: View {
     }
     
     var body: some View {
-        VStack {
-            Text("Predictions").bold()
-            ScrollView {
-            
-                VStack {
-                    ForEach(predictionController.prediction, id: \.self) { d in
-                        Text(d.label).padding()
-                    }
-                    
+        ScrollView {
+            VStack {
+                capturedPhotoThumbnail
+                Text("Predictions").bold().font(.largeTitle)
+                ForEach(predictionController.prediction, id: \.self) { d in
+                    LineView(label: d.label, probability: d.confidence).padding()
                 }
             }
         }
