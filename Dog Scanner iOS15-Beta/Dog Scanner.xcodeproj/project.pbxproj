@@ -10,6 +10,9 @@
 		1CAC7236E646EE42433DD9F2 /* Pods_Dog_Scanner_Dog_ScannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A7C053E16FB50AEFEAB716 /* Pods_Dog_Scanner_Dog_ScannerUITests.framework */; };
 		9F164F3A267247C30048BE89 /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 9F164F38267247C30048BE89 /* model.tflite */; };
 		9F164F3B267247C30048BE89 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F164F39267247C30048BE89 /* labels.txt */; };
+		9F1F8E26267A7DE100613440 /* LineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F8E25267A7DE100613440 /* LineViewController.swift */; };
+		9F1F8E28267A7F9500613440 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F8E27267A7F9500613440 /* Types.swift */; };
+		9F1F8E2A267A835700613440 /* DogBreedCharactaristics.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F8E29267A835700613440 /* DogBreedCharactaristics.json */; };
 		9F3E7A1A2679138600633703 /* PredictionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7A192679138600633703 /* PredictionController.swift */; };
 		9F3E7A1C2679187C00633703 /* CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7A1B2679187C00633703 /* CVPixelBuffer.swift */; };
 		9F3E7A1E2679CB4700633703 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7A1D2679CB4700633703 /* LineView.swift */; };
@@ -80,6 +83,9 @@
 		9B2CB34FAA7B114776560FE8 /* Pods_Dog_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dog_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F164F38267247C30048BE89 /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model.tflite; path = "../../TfLite Classifier/ImageClassification/Model/model.tflite"; sourceTree = "<group>"; };
 		9F164F39267247C30048BE89 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = "../../TfLite Classifier/ImageClassification/Model/labels.txt"; sourceTree = "<group>"; };
+		9F1F8E25267A7DE100613440 /* LineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewController.swift; sourceTree = "<group>"; };
+		9F1F8E27267A7F9500613440 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		9F1F8E29267A835700613440 /* DogBreedCharactaristics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DogBreedCharactaristics.json; sourceTree = "<group>"; };
 		9F3E7A192679138600633703 /* PredictionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionController.swift; sourceTree = "<group>"; };
 		9F3E7A1B2679187C00633703 /* CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBuffer.swift; sourceTree = "<group>"; };
 		9F3E7A1D2679CB4700633703 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
@@ -177,6 +183,8 @@
 				9F9EC86B26720F9800BEB27A /* PredictionPage.swift */,
 				9F3E7A192679138600633703 /* PredictionController.swift */,
 				9F3E7A1D2679CB4700633703 /* LineView.swift */,
+				9F1F8E25267A7DE100613440 /* LineViewController.swift */,
+				9F1F8E29267A835700613440 /* DogBreedCharactaristics.json */,
 			);
 			path = PredictionView;
 			sourceTree = "<group>";
@@ -215,6 +223,7 @@
 				9F9EC82226720BC000BEB27A /* Assets.xcassets */,
 				9F9EC82726720BC000BEB27A /* Info.plist */,
 				9F9EC82426720BC000BEB27A /* Preview Content */,
+				9F1F8E27267A7F9500613440 /* Types.swift */,
 			);
 			path = "Dog Scanner";
 			sourceTree = "<group>";
@@ -378,6 +387,7 @@
 			files = (
 				9F9EC8702672103D00BEB27A /* dog.JPG in Resources */,
 				9F9EC82626720BC000BEB27A /* Preview Assets.xcassets in Resources */,
+				9F1F8E2A267A835700613440 /* DogBreedCharactaristics.json in Resources */,
 				9F164F3B267247C30048BE89 /* labels.txt in Resources */,
 				9F9EC82326720BC000BEB27A /* Assets.xcassets in Resources */,
 				9F164F3A267247C30048BE89 /* model.tflite in Resources */,
@@ -479,6 +489,7 @@
 				9F9EC86826720C1600BEB27A /* UIView.swift in Sources */,
 				9F9EC85826720BFF00BEB27A /* CameraService.swift in Sources */,
 				9F9EC85526720BFF00BEB27A /* ImageResizer.swift in Sources */,
+				9F1F8E28267A7F9500613440 /* Types.swift in Sources */,
 				9F9EC85B26720BFF00BEB27A /* PhotoCaptureProcessor.swift in Sources */,
 				9F9EC85E26720BFF00BEB27A /* CameraPreview.swift in Sources */,
 				9F9EC82126720BBE00BEB27A /* ContentView.swift in Sources */,
@@ -486,6 +497,7 @@
 				9F3E7A1C2679187C00633703 /* CVPixelBuffer.swift in Sources */,
 				9F9EC81F26720BBE00BEB27A /* Dog_ScannerApp.swift in Sources */,
 				9F9EC86126720BFF00BEB27A /* CameraService+Extensions.swift in Sources */,
+				9F1F8E26267A7DE100613440 /* LineViewController.swift in Sources */,
 				9F9EC85226720BFF00BEB27A /* CameraView.swift in Sources */,
 				9F9EC86426720C0000BEB27A /* CameraService+Enums.swift in Sources */,
 				9F922A062679DE4C00CCF2BB /* ImagePicker.swift in Sources */,

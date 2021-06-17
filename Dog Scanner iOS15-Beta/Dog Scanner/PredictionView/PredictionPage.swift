@@ -15,6 +15,7 @@ struct PredictionPage: View {
     init() {
         
     }
+    @ObservedObject var lineViewController = LineViewController()
     @ObservedObject var predictionController = PredictionController()
     @State var photo: UIImage?
     @State var showImagePicker = false
@@ -38,21 +39,20 @@ struct PredictionPage: View {
                     self.showImagePicker.toggle()
                 }.onAppear(perform: triggerToggle)
             } else {
-                ScrollView {
+               
                     VStack {
                         capturedPhotoThumbnail
-                        Text("Predictions").bold().font(.largeTitle)
                         if predictionController.prediction[0].confidence < 0.22 {
-                            Text("We think your Dog is mixed between").padding().font(.title)
+                            Text("We think your dog is mixed between").bold().font(.title).padding()
                             ForEach(predictionController.prediction, id: \.self) { d in
-                                LineView(label: d.label, probability: d.confidence).padding()
+                                LineView(label: d.label, probability: d.confidence, lineViewController: lineViewController).padding()
                             }
                         } else {
-                            LineView(label: predictionController.prediction[0].label, probability: predictionController.prediction[0].confidence)
+                            LineView(label: predictionController.prediction[0].label, probability: predictionController.prediction[0].confidence, lineViewController: lineViewController)
                         }
                         
                     }
-                }
+                
             }
         }
         .sheet(isPresented: $showImagePicker) {

@@ -25,7 +25,6 @@ struct Result {
 typealias FileInfo = (name: String, extension: String)
 
 class PredictionController: ObservableObject {
-    //static var shared = PredictionController()
     
     enum NeuralNet {
       static let modelInfo: FileInfo = (name: "model", extension: "tflite")
@@ -44,6 +43,8 @@ class PredictionController: ObservableObject {
     }
 }
 
+// Based on Tensorflow Example Resource
+// asynchronity and export format features added
 class ModelDataHandler: ObservableObject {
 
   // MARK: - Internal Properties

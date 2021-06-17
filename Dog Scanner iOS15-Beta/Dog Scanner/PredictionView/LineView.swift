@@ -8,25 +8,103 @@
 import SwiftUI
 
 struct LineView: View {
-    init(label: String, probability: Float) {
+    init(label: String, probability: Float, lineViewController: LineViewController) {
+        self.lineViewController = lineViewController
+        breedInfo = lineViewController.matchDogBreed(breedName: label)
+        print(breedInfo)
         prb = String(format: "%.2f", probability)
         lbl = label.components(separatedBy: "-")[1].replacingOccurrences(of: "_", with: " ")
         print(lbl)
     }
+    @ObservedObject var lineViewController: LineViewController
+    var breedInfo: DogBreedCharacteristic?
     var lbl: String
     var  prb: String
     var body: some View {
-        VStack {
+        Form {
+            Section(header: Text("Dog Breed")) {
+                HStack {
+                    Text(lbl)
+                    Spacer()
+                    Text(prb)
+                }
+            }
+            Section(header: Text("Information")) {
+                HStack {
+                    Text("Temperament")
+                    Spacer()
+                    Text(breedInfo!.Temperment!)
+                }
+                HStack {
+                    Text("Intelligence")
+                    Spacer()
+                    Text(String(format: "%.0f", breedInfo!.Intelligence!))
+                }
+                HStack {
+                    Text("Average male weight")
+                    Spacer()
+                    Text("\(String(format: "%.0f", breedInfo!.MaleWtKg!)) kg")
+                }
+            }
+            
+        }
+        /*VStack {
             Text(lbl + " " + prb).padding().font(.title3)
-        }.frame(width: UIScreen.screenWidth * 0.8, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            if breedInfo != nil {
+                Form {
+                    Section(header: Text("")) {
+                        HStack {
+                            Text(lbl)
+                            Spacer()
+                            Text(prb)
+                        }
+                    }
+                    Section(header: Text("Information")) {
+                        HStack {
+                            Text("Temperament")
+                            Spacer()
+                            Text(breedInfo!.Temperment!)
+                        }
+                        HStack {
+                            Text("Intelligence")
+                            Spacer()
+                            Text(String(format: "%.0f", breedInfo!.Intelligence!))
+                        }
+                        HStack {
+                            Text("Average male weight")
+                            Spacer()
+                            Text("\(String(format: "%.0f", breedInfo!.MaleWtKg!)) kg")
+                        }
+                    }
+                }
+                /*HStack {
+                    VStack {
+                        Text("Temperament:")
+                    }.padding()
+                    VStack {
+                        Text(breedInfo!.Temperment!)
+                    }.padding()
+                }
+                HStack {
+                    VStack {
+                        Text("Intelligence:")
+                        Text("Average male weight:")
+                    }.padding()
+                    VStack {
+                        Text(String(format: "%.0f", breedInfo!.Intelligence!))
+                        Text("\(String(format: "%.0f", breedInfo!.MaleWtKg!)) kg")
+                    }.padding()
+                }*/
+            }
+        }.frame(width: UIScreen.screenWidth * 0.9, alignment: .center)
         .background(Color("Background"))
         .cornerRadius(20)
-        .shadow(color: .gray, radius: 3, x: 3, y: 3)
+        .shadow(color: .gray, radius: 3, x: 3, y: 3)*/
     }
 }
 
 struct LineView_Previews: PreviewProvider {
     static var previews: some View {
-        LineView(label: "Labrador", probability: 0.9)
+        LineView(label: "Labrador", probability: 0.9, lineViewController: LineViewController())
     }
 }

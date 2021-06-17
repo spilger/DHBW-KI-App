@@ -116,9 +116,6 @@ struct CameraView: View {
             PredictionPage(photo: model.photo)
         }
     }
-    struct loadedImage {
-        
-    }
     @State private var isShowPhotoLibrary = false
     @State private var showPred = false
     @State var image: UIImage?
