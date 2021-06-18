@@ -11,8 +11,7 @@ struct LineView: View {
     init(label: String, probability: Float, lineViewController: LineViewController) {
         self.lineViewController = lineViewController
         breedInfo = lineViewController.matchDogBreed(breedName: label)
-        print(breedInfo)
-        prb = String(format: "%.2f", probability)
+        prb = String(format: "%.0f", probability*100) + " %"
         lbl = label.components(separatedBy: "-")[1].replacingOccurrences(of: "_", with: " ")
         print(lbl)
     }
@@ -23,83 +22,36 @@ struct LineView: View {
     var body: some View {
         Form {
             Section(header: Text("Dog Breed")) {
-                HStack {
-                    Text(lbl)
-                    Spacer()
-                    Text(prb)
-                }
+               HStack {
+                   Text(lbl.capitalized)
+                   Spacer()
+                   Text(prb)
+               }
             }
-            Section(header: Text("Information")) {
-                HStack {
-                    Text("Temperament")
-                    Spacer()
-                    Text(breedInfo!.Temperment!)
+           Section(header: Text("Information")) {
+               HStack {
+                   Text("Temperament")
+                   Spacer()
+                   Text(breedInfo!.Temperment!)
+               }
+               HStack {
+                   Text("Intelligence")
+                   Spacer()
+                   Text(String(format: "%.0f", breedInfo!.Intelligence!))
+               }
+               HStack {
+                   Text("Average male weight")
+                   Spacer()
+                   Text("\(String(format: "%.0f", breedInfo!.MaleWtKg!)) kg")
                 }
                 HStack {
-                    Text("Intelligence")
+                    Text("Average Puppy Price")
                     Spacer()
-                    Text(String(format: "%.0f", breedInfo!.Intelligence!))
-                }
-                HStack {
-                    Text("Average male weight")
-                    Spacer()
-                    Text("\(String(format: "%.0f", breedInfo!.MaleWtKg!)) kg")
+                    Text("\(String(format: "%.0f", breedInfo!.AvgPupPrice!)) €")
                 }
             }
             
         }
-        /*VStack {
-            Text(lbl + " " + prb).padding().font(.title3)
-            if breedInfo != nil {
-                Form {
-                    Section(header: Text("")) {
-                        HStack {
-                            Text(lbl)
-                            Spacer()
-                            Text(prb)
-                        }
-                    }
-                    Section(header: Text("Information")) {
-                        HStack {
-                            Text("Temperament")
-                            Spacer()
-                            Text(breedInfo!.Temperment!)
-                        }
-                        HStack {
-                            Text("Intelligence")
-                            Spacer()
-                            Text(String(format: "%.0f", breedInfo!.Intelligence!))
-                        }
-                        HStack {
-                            Text("Average male weight")
-                            Spacer()
-                            Text("\(String(format: "%.0f", breedInfo!.MaleWtKg!)) kg")
-                        }
-                    }
-                }
-                /*HStack {
-                    VStack {
-                        Text("Temperament:")
-                    }.padding()
-                    VStack {
-                        Text(breedInfo!.Temperment!)
-                    }.padding()
-                }
-                HStack {
-                    VStack {
-                        Text("Intelligence:")
-                        Text("Average male weight:")
-                    }.padding()
-                    VStack {
-                        Text(String(format: "%.0f", breedInfo!.Intelligence!))
-                        Text("\(String(format: "%.0f", breedInfo!.MaleWtKg!)) kg")
-                    }.padding()
-                }*/
-            }
-        }.frame(width: UIScreen.screenWidth * 0.9, alignment: .center)
-        .background(Color("Background"))
-        .cornerRadius(20)
-        .shadow(color: .gray, radius: 3, x: 3, y: 3)*/
     }
 }
 

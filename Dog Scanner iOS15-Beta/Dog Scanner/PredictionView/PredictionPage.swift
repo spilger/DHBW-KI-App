@@ -19,6 +19,8 @@ struct PredictionPage: View {
     @ObservedObject var predictionController = PredictionController()
     @State var photo: UIImage?
     @State var showImagePicker = false
+    @State var halfModalShown = false
+    @State var breedIndex = 0
     var capturedPhotoThumbnail: some View {
         Group {
             if photo != nil {
@@ -33,32 +35,63 @@ struct PredictionPage: View {
     }
     
     var body: some View {
-        VStack {
-            if(photo == nil) {
-                Button("Pick image") {
-                    self.showImagePicker.toggle()
-                }.onAppear(perform: triggerToggle)
-            } else {
-               
+        ZStack {
+            Color("Background2")
+                .ignoresSafeArea()
+            VStack {
+                if(photo == nil) {
+                    Button("Pick image") {
+                        self.showImagePicker.toggle()
+                    }.onAppear(perform: triggerToggle)
+                } else {
+                   
                     VStack {
                         capturedPhotoThumbnail
                         if predictionController.prediction[0].confidence < 0.22 {
-                            Text("We think your dog is mixed between").bold().font(.title).padding()
-                            ForEach(predictionController.prediction, id: \.self) { d in
-                                LineView(label: d.label, probability: d.confidence, lineViewController: lineViewController).padding()
-                            }
+                            Text("We think your dog is mixed between").font(.title).padding().multilineTextAlignment(.center)
+                                .foregroundColor(Color("Text2"))
+                            MixedBreedLineView(breeds: predictionController.prediction, lineViewController: lineViewController, halfModalShown: _halfModalShown, breedIndex: _breedIndex)
                         } else {
                             LineView(label: predictionController.prediction[0].label, probability: predictionController.prediction[0].confidence, lineViewController: lineViewController)
                         }
                         
                     }
-                
+                    
+                }
             }
-        }
-        .sheet(isPresented: $showImagePicker) {
-            ImagePickerView(sourceType: .photoLibrary) { image in
-                self.photo = image
-                predictionController.predict(image: image)
+            .sheet(isPresented: $showImagePicker) {
+                ImagePickerView(sourceType: .photoLibrary) { image in
+                    self.photo = image
+                    predictionController.predict(image: image)
+                }
+            }
+            if photo != nil {
+                HalfModalView(isShown: $halfModalShown, modalHeight: 300) {
+                    Form {
+                        Section(header: Text("Information")) {
+                            HStack {
+                                Text("Temperament")
+                                Spacer()
+                                Text(lineViewController.breedInfos[breedIndex].Temperment!)
+                            }
+                            HStack {
+                                Text("Intelligence")
+                                Spacer()
+                                Text(String(format: "%.0f", lineViewController.breedInfos[breedIndex].Intelligence!))
+                            }
+                            HStack {
+                                Text("Average male weight")
+                                Spacer()
+                                Text("\(String(format: "%.0f", lineViewController.breedInfos[breedIndex].MaleWtKg!)) kg")
+                             }
+                             HStack {
+                                 Text("Average Puppy Price")
+                                 Spacer()
+                                 Text("\(String(format: "%.0f", lineViewController.breedInfos[breedIndex].AvgPupPrice!)) €")
+                             }
+                         }
+                    }
+                }
             }
         }
         
