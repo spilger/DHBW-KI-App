@@ -7,34 +7,30 @@
 
 import SwiftUI
 
-struct PredictionPage: View {
+struct PredictionPage2: View {
     init(pht: Photo) {
-        self.photoCam = pht.image!
+        print("CAMM")
+        photo = pht.image!
         print(predictionController.predict(image: pht.image!))
+       
     }
-    init() {
+    init () {
+        print("Init lib")
         initCamera = false
-        photoCam = UIImage()
+        photo = UIImage()
     }
+
     @ObservedObject var lineViewController = LineViewController()
     @ObservedObject var predictionController = PredictionController()
-    @State var photo: UIImage?
-    @State var photoCam: UIImage
+    @State var photo: UIImage
     @State var showImagePicker = false
     @State var halfModalShown = false
     @State var breedIndex = 0
-    var initCamera = true
+    @State var initCamera = true
     var capturedPhotoThumbnail: some View {
         Group {
             if photo != nil {
-                Image(uiImage: photo!)
-                   .resizable()
-                   .aspectRatio(contentMode: .fill)
-                   .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
-                   .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                   .animation(.spring())
-            } else if photoCam != nil {
-                Image(uiImage: photoCam)
+                Image(uiImage: photo)
                    .resizable()
                    .aspectRatio(contentMode: .fill)
                    .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
@@ -49,13 +45,10 @@ struct PredictionPage: View {
             Color("Background2")
                 .ignoresSafeArea()
             VStack {
-                if(photo == nil && !initCamera) {
-                    Button("Pick image") {
-                        self.showImagePicker.toggle()
-                    }.onAppear(perform: triggerToggle)
-                } else {
+                 if initCamera {
                    
                     VStack {
+                        //capturedPhotoThumbnailLib
                         capturedPhotoThumbnail
                         if predictionController.prediction[0].confidence < 0.22 {
                             Text("We think your dog is mixed between").font(.title).padding().multilineTextAlignment(.center)
@@ -67,15 +60,20 @@ struct PredictionPage: View {
                         
                     }
                     
+                } else {
+                    Button("Pick image") {
+                        self.showImagePicker.toggle()
+                    }.onAppear(perform: triggerToggle)
                 }
             }
             .sheet(isPresented: $showImagePicker) {
                 ImagePickerView(sourceType: .photoLibrary) { image in
-                    self.photo = image
                     predictionController.predict(image: image)
+                    self.photo = image
+                    self.initCamera.toggle()
                 }
             }
-            if photo != nil || initCamera {
+            if (initCamera) && photo != nil {
                 HalfModalView(isShown: $halfModalShown, modalHeight: 300) {
                     Form {
                         Section(header: Text("Information")) {
@@ -87,17 +85,17 @@ struct PredictionPage: View {
                             HStack {
                                 Text("Intelligence")
                                 Spacer()
-                                Text(String(format: "%.0f", lineViewController.breedInfos[breedIndex].Intelligence ?? 0.0))
+                                Text(String(format: "%.0f", lineViewController.breedInfos[breedIndex].Intelligence!))
                             }
                             HStack {
                                 Text("Average male weight")
                                 Spacer()
-                                Text("\(String(format: "%.0f", lineViewController.breedInfos[breedIndex].MaleWtKg ?? 0.0)) kg")
+                                Text("\(String(format: "%.0f", lineViewController.breedInfos[breedIndex].MaleWtKg!)) kg")
                              }
                              HStack {
                                  Text("Average Puppy Price")
                                  Spacer()
-                                 Text("\(String(format: "%.0f", lineViewController.breedInfos[breedIndex].AvgPupPrice ?? 0.0)) €")
+                                 Text("\(String(format: "%.0f", lineViewController.breedInfos[breedIndex].AvgPupPrice!)) €")
                              }
                          }
                     }
@@ -111,8 +109,8 @@ struct PredictionPage: View {
     }
 }
 
-struct PredictionPage_Previews: PreviewProvider {
+struct PredictionPage2_Previews: PreviewProvider {
     static var previews: some View {
-        PredictionPage(pht: Photo(originalData: Data()))
+        PredictionPage2(pht: Photo(originalData: Data()))
     }
 }

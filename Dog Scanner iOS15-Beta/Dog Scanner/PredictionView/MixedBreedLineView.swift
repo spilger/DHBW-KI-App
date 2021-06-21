@@ -16,7 +16,7 @@ struct MixedBreedLineView: View {
         self.breedInfos = []
         for brd in breeds {
             self.breeds.append(Inference(confidence: brd.confidence, label: brd.label.components(separatedBy: "-")[1].replacingOccurrences(of: "_", with: " ")))
-            self.breedInfos.append(lineViewController.matchDogBreed(breedName: brd.label)!)
+            self.breedInfos.append(lineViewController.matchDogBreed(breedName: brd.label) ??  DogBreedCharacteristic(BreedName: "", AltBreedName: "", Group1: "", Group2: "", MaleWtKg: 0.0, Temperment: "WIr haben leider keine Informationen zu dieser Rasse.", AvgPupPrice: 0.0, Intelligence: 0.1, Watchdog: 0.0, PopularityUS2017: 0.0))
         }
         lineViewController.breedInfos = self.breedInfos
     }
