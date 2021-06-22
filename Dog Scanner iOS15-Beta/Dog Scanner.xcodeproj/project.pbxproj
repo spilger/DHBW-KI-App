@@ -19,7 +19,6 @@
 		9F3E7A1E2679CB4700633703 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7A1D2679CB4700633703 /* LineView.swift */; };
 		9F87A14226814481003163C3 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F87A14126814481003163C3 /* labels.txt */; };
 		9F87A1462681451E003163C3 /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 9F87A1452681451E003163C3 /* model.tflite */; };
-		9F87A1482681542F003163C3 /* PredictionPage 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F87A1472681542F003163C3 /* PredictionPage 2.swift */; };
 		9F922A062679DE4C00CCF2BB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F922A052679DE4C00CCF2BB /* ImagePicker.swift */; };
 		9F9EC81F26720BBE00BEB27A /* Dog_ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC81E26720BBE00BEB27A /* Dog_ScannerApp.swift */; };
 		9F9EC82126720BBE00BEB27A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC82026720BBE00BEB27A /* ContentView.swift */; };
@@ -93,7 +92,6 @@
 		9F3E7A1D2679CB4700633703 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		9F87A14126814481003163C3 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
 		9F87A1452681451E003163C3 /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.tflite; sourceTree = "<group>"; };
-		9F87A1472681542F003163C3 /* PredictionPage 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PredictionPage 2.swift"; sourceTree = "<group>"; };
 		9F922A052679DE4C00CCF2BB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		9F9EC81B26720BBE00BEB27A /* Dog Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9EC81E26720BBE00BEB27A /* Dog_ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_ScannerApp.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 		9F3E7A182679136C00633703 /* PredictionView */ = {
 			isa = PBXGroup;
 			children = (
-				9F87A1472681542F003163C3 /* PredictionPage 2.swift */,
 				9F9EC86B26720F9800BEB27A /* PredictionPage.swift */,
 				9F3E7A192679138600633703 /* PredictionController.swift */,
 				9F3E7A1D2679CB4700633703 /* LineView.swift */,
@@ -499,7 +496,6 @@
 				9F1158D8267C7E2E009040C4 /* MixedBreedLineView.swift in Sources */,
 				9F9EC85E26720BFF00BEB27A /* CameraPreview.swift in Sources */,
 				9F9EC82126720BBE00BEB27A /* ContentView.swift in Sources */,
-				9F87A1482681542F003163C3 /* PredictionPage 2.swift in Sources */,
 				9F3E7A1A2679138600633703 /* PredictionController.swift in Sources */,
 				9F3E7A1C2679187C00633703 /* CVPixelBuffer.swift in Sources */,
 				9F9EC81F26720BBE00BEB27A /* Dog_ScannerApp.swift in Sources */,
