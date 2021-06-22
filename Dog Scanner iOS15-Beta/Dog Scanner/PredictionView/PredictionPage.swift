@@ -8,23 +8,33 @@
 import SwiftUI
 
 struct PredictionPage: View {
-    init(photo: Photo) {
-        self.photo = photo.image!
-        print(predictionController.predict(image: photo.image!))
+    init(pht: Photo) {
+        self.photoCam = pht.image!
+        print(predictionController.predict(image: pht.image!))
     }
     init() {
-        
+        initCamera = false
+        photoCam = UIImage()
     }
     @ObservedObject var lineViewController = LineViewController()
     @ObservedObject var predictionController = PredictionController()
     @State var photo: UIImage?
+    @State var photoCam: UIImage
     @State var showImagePicker = false
     @State var halfModalShown = false
     @State var breedIndex = 0
+    var initCamera = true
     var capturedPhotoThumbnail: some View {
         Group {
             if photo != nil {
                 Image(uiImage: photo!)
+                   .resizable()
+                   .aspectRatio(contentMode: .fill)
+                   .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
+                   .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                   .animation(.spring())
+            } else if photoCam != nil {
+                Image(uiImage: photoCam)
                    .resizable()
                    .aspectRatio(contentMode: .fill)
                    .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
@@ -39,7 +49,7 @@ struct PredictionPage: View {
             Color("Background2")
                 .ignoresSafeArea()
             VStack {
-                if(photo == nil) {
+                if(photo == nil && !initCamera) {
                     Button("Pick image") {
                         self.showImagePicker.toggle()
                     }.onAppear(perform: triggerToggle)
@@ -65,7 +75,7 @@ struct PredictionPage: View {
                     predictionController.predict(image: image)
                 }
             }
-            if photo != nil {
+            if photo != nil || initCamera {
                 HalfModalView(isShown: $halfModalShown, modalHeight: 300) {
                     Form {
                         Section(header: Text("Information")) {
@@ -77,17 +87,17 @@ struct PredictionPage: View {
                             HStack {
                                 Text("Intelligence")
                                 Spacer()
-                                Text(String(format: "%.0f", lineViewController.breedInfos[breedIndex].Intelligence!))
+                                Text(String(format: "%.0f", lineViewController.breedInfos[breedIndex].Intelligence ?? 0.0))
                             }
                             HStack {
                                 Text("Average male weight")
                                 Spacer()
-                                Text("\(String(format: "%.0f", lineViewController.breedInfos[breedIndex].MaleWtKg!)) kg")
+                                Text("\(String(format: "%.0f", lineViewController.breedInfos[breedIndex].MaleWtKg ?? 0.0)) kg")
                              }
                              HStack {
                                  Text("Average Puppy Price")
                                  Spacer()
-                                 Text("\(String(format: "%.0f", lineViewController.breedInfos[breedIndex].AvgPupPrice!)) €")
+                                 Text("\(String(format: "%.0f", lineViewController.breedInfos[breedIndex].AvgPupPrice ?? 0.0)) €")
                              }
                          }
                     }
@@ -103,6 +113,6 @@ struct PredictionPage: View {
 
 struct PredictionPage_Previews: PreviewProvider {
     static var previews: some View {
-        PredictionPage(photo: Photo(originalData: Data()))
+        PredictionPage(pht: Photo(originalData: Data()))
     }
 }

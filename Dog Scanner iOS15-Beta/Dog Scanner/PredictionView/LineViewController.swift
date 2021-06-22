@@ -13,14 +13,20 @@ class LineViewController: ObservableObject {
     
     var dogBreedData: [DogBreedCharacteristic] = []
     var breedInfos: [DogBreedCharacteristic] = []
+    
     func matchDogBreed(breedName: String) -> DogBreedCharacteristic? {
         let bdn = formatString(s: breedName.components(separatedBy: "-")[1])
-        print(bdn)
         for db in dogBreedData {
             let d = formatString(s: db.BreedName)
             if d.contains(bdn) {
                 self.breedInfos.append(db)
                 return db
+            } else {
+                let dAlt = formatString(s: db.AltBreedName ?? "")
+                if dAlt.contains(bdn) {
+                    self.breedInfos.append(db)
+                    return db
+                }
             }
         }
         return nil

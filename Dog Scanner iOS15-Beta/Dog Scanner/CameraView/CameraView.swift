@@ -98,6 +98,7 @@ struct CameraView: View {
                 group.notify(queue: .main) {
                    // do something here when loop finished
                     sheetShowhn.toggle()
+                    print("HELLO")
                 }
             } else {
                 model.captureVideo(capturing: _capturing)
@@ -113,7 +114,7 @@ struct CameraView: View {
                 )
         })
         .sheet(isPresented: $sheetShowhn) {
-            PredictionPage(photo: model.photo)
+            PredictionPage(pht: model.photo)
         }
     }
     @State private var isShowPhotoLibrary = false
