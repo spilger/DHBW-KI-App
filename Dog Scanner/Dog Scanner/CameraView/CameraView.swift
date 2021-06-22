@@ -98,6 +98,7 @@ struct CameraView: View {
                 group.notify(queue: .main) {
                    // do something here when loop finished
                     sheetShowhn.toggle()
+                    print("HELLO")
                 }
             } else {
                 model.captureVideo(capturing: _capturing)
@@ -113,12 +114,16 @@ struct CameraView: View {
                 )
         })
         .sheet(isPresented: $sheetShowhn) {
-            PredictionPage(photo: model.photo)
+            PredictionPage(pht: model.photo)
         }
     }
-    
+    @State private var isShowPhotoLibrary = false
+    @State private var showPred = false
+    @State var image: UIImage?
     var capturedPhotoThumbnail: some View {
-        Group {
+        Button(action: {
+            self.isShowPhotoLibrary = true
+        }) {
             if model.photo != nil {
                 Image(uiImage: model.photo.image!)
                     .resizable()
@@ -133,6 +138,13 @@ struct CameraView: View {
                     .foregroundColor(capturing ? Color.red : Color.white)
             }
         }
+        .sheet(isPresented: $isShowPhotoLibrary, onDismiss: loadImage) {
+            PredictionPage()
+        }
+    }
+    func loadImage() {
+        //guard let image = image else {return}
+       // showPred.toggle()
     }
     
     var flipCameraButton: some View {

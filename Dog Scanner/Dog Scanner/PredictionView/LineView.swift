@@ -8,25 +8,55 @@
 import SwiftUI
 
 struct LineView: View {
-    init(label: String, probability: Float) {
-        prb = String(format: "%.2f", probability)
+    init(label: String, probability: Float, lineViewController: LineViewController) {
+        self.lineViewController = lineViewController
+        breedInfo = lineViewController.matchDogBreed(breedName: label)
+        prb = String(format: "%.0f", probability*100) + " %"
         lbl = label.components(separatedBy: "-")[1].replacingOccurrences(of: "_", with: " ")
         print(lbl)
     }
+    @ObservedObject var lineViewController: LineViewController
+    var breedInfo: DogBreedCharacteristic?
     var lbl: String
     var  prb: String
     var body: some View {
-        VStack {
-            Text(lbl + " " + prb).padding().font(.title)
-        }.frame(width: UIScreen.screenWidth * 0.8, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-        .background(Color("Background"))
-        .cornerRadius(20)
-        .shadow(color: .gray, radius: 3, x: 3, y: 3)
+        Form {
+            Section(header: Text("Dog Breed")) {
+               HStack {
+                   Text(lbl.capitalized)
+                   Spacer()
+                   Text(prb)
+               }
+            }
+           Section(header: Text("Information")) {
+               HStack {
+                   Text("Temperament")
+                   Spacer()
+                   Text(breedInfo!.Temperment!)
+               }
+               HStack {
+                   Text("Intelligence")
+                   Spacer()
+                   Text(String(format: "%.0f", breedInfo!.Intelligence!))
+               }
+               HStack {
+                   Text("Average male weight")
+                   Spacer()
+                   Text("\(String(format: "%.0f", breedInfo!.MaleWtKg!)) kg")
+                }
+                HStack {
+                    Text("Average Puppy Price")
+                    Spacer()
+                    Text("\(String(format: "%.0f", breedInfo!.AvgPupPrice!)) €")
+                }
+            }
+            
+        }
     }
 }
 
 struct LineView_Previews: PreviewProvider {
     static var previews: some View {
-        LineView(label: "Labrador", probability: 0.9)
+        LineView(label: "Labrador", probability: 0.9, lineViewController: LineViewController())
     }
 }
